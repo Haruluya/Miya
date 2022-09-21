@@ -34,3 +34,13 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <imgui/imgui.h>
+
+//-----utils--------------------
+#include "utils/Timer.h"
+#include "utils/Random.h"
+//------------------------------
+
+
+#include "render/Renderer.h"
+
+#include "log/Log.h"

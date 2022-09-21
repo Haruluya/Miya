@@ -122,7 +122,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>src;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;resource;vendor;</AdditionalIncludeDirectories>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>MYpch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -163,6 +163,10 @@
     <ClInclude Include="src\log\Log.h" />
     <ClInclude Include="src\MiyaEngine.h" />
     <ClInclude Include="src\MYpch.h" />
+    <ClInclude Include="src\render\Renderer.h" />
+    <ClInclude Include="src\render\Shader.h" />
+    <ClInclude Include="src\utils\Image.h" />
+    <ClInclude Include="src\utils\Random.h" />
     <ClInclude Include="src\utils\Timestep.h" />
     <ClInclude Include="src\window\Window.h" />
     <ClInclude Include="src\window\WindowsInput.h" />
@@ -707,6 +711,9 @@
     <ClCompile Include="src\log\Log.cpp" />
     <ClCompile Include="src\MiyaEngine.cpp" />
     <ClCompile Include="src\MYpch.cpp" />
+    <ClCompile Include="src\render\Shader.cpp" />
+    <ClCompile Include="src\utils\Image.cpp" />
+    <ClCompile Include="src\utils\Random.cpp" />
     <ClCompile Include="src\window\WindowsInput.cpp" />
     <ClCompile Include="src\window\WinWindow.cpp" />
     <ClCompile Include="vendor\includes\glad\glad.c" />
@@ -720,6 +727,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+    <None Include="src\utils\Timer.h" />
     <None Include="vendor\includes\assimp\color4.inl" />
     <None Include="vendor\includes\assimp\material.inl" />
     <None Include="vendor\includes\assimp\matrix3x3.inl" />

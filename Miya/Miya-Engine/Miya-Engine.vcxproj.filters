@@ -1659,6 +1659,18 @@
     <ClInclude Include="vendor\includes\Imgui\imstb_truetype.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\render\Shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\Random.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\Image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\Renderer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\imgui\ImGuiBuild.cpp">
@@ -1713,6 +1725,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\MiyaEngine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\Shader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\Random.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\Image.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -2147,6 +2168,7 @@
       <Filter>头文件</Filter>
     </None>
     <None Include="cpp.hint" />
+    <None Include="src\utils\Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="vendor\libs\assimpd.lib" />

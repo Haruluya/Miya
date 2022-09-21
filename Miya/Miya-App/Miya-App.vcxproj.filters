@@ -21,6 +21,9 @@
     <ClInclude Include="src\AppLayer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\OpenGLImp\TriangleImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -29,5 +32,12 @@
     <ClCompile Include="src\AppLayer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\OpenGLImp\TriangleImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.vs" />
+    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.fs" />
   </ItemGroup>
 </Project>

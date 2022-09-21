@@ -348,3 +348,14 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+
+
+
+# another——————————————————————————
+/Miya/bin-int
+*.sln
+*.vcxproj
+*.filters
+

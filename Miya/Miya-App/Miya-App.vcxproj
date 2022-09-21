@@ -121,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\Miya-Engine\src;..\Miya-Engine\vendor\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Miya-Engine\resource;..\Miya-Engine\src;..\Miya-Engine\vendor\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,10 +153,16 @@
   <ItemGroup>
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\AppLayer.h" />
+    <ClInclude Include="src\OpenGLImp\TriangleImp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\AppLayer.cpp" />
+    <ClCompile Include="src\OpenGLImp\TriangleImp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.fs" />
+    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

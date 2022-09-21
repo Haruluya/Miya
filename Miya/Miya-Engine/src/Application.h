@@ -8,12 +8,17 @@
 
 #include "imgui/ImGuiLayer.h"
 
+#define MIYA_WINDOW_WIDTH 1600
+#define MIYA_WINDOW_HEIGHT 900
+
+
+
 namespace Miya {
 
 	class Application
 	{
 	public:
-		Application(const std::string& name = "OpenGL Sandbox", uint32_t width = 1280, uint32_t height = 720);
+		Application(const std::string& name = "Miya", uint32_t width = MIYA_WINDOW_WIDTH, uint32_t height = MIYA_WINDOW_HEIGHT);
 		virtual ~Application() = default;
 
 		void Run();
