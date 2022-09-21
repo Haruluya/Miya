@@ -1,10 +1,10 @@
-#pragma once
+
 #include "MYpch.h"
-#include "imgui/ImGuiLayer.h"
+#include "ImGuiLayer.h"
 
 #include "imgui/imgui.h"
 
-#define IMGUI_IMPL_API
+
 #include "imgui/imgui_impl_opengl3.h"
 #include "imgui/imgui_impl_glfw.h"
 #include "Application.h"

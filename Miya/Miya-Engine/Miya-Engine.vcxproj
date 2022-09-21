@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -82,6 +82,8 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>vendor\includes;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>vendor\libs;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <OutDir>..\bin\Debug-windows-x86_64\Miya-Engine\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\Miya-Engine\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -121,6 +123,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>src;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>MYpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -157,6 +161,7 @@
     <ClInclude Include="src\layer\Layer.h" />
     <ClInclude Include="src\layer\LayerStack.h" />
     <ClInclude Include="src\log\Log.h" />
+    <ClInclude Include="src\MiyaEngine.h" />
     <ClInclude Include="src\MYpch.h" />
     <ClInclude Include="src\utils\Timestep.h" />
     <ClInclude Include="src\window\Window.h" />
@@ -594,16 +599,44 @@
     <ClInclude Include="vendor\includes\Imgui\imstb_textedit.h" />
     <ClInclude Include="vendor\includes\Imgui\imstb_truetype.h" />
     <ClInclude Include="vendor\includes\KHR\khrplatform.h" />
+    <ClInclude Include="vendor\includes\spdlog\async.h" />
+    <ClInclude Include="vendor\includes\spdlog\async_logger-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\async_logger.h" />
     <ClInclude Include="vendor\includes\spdlog\cfg\argv.h" />
     <ClInclude Include="vendor\includes\spdlog\cfg\env.h" />
     <ClInclude Include="vendor\includes\spdlog\cfg\helpers-inl.h" />
     <ClInclude Include="vendor\includes\spdlog\cfg\helpers.h" />
+    <ClInclude Include="vendor\includes\spdlog\common-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\common.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\backtracer-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\backtracer.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\circular_q.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\console_globals.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\file_helper-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\file_helper.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\fmt_helper.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\log_msg-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\log_msg.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\log_msg_buffer-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\log_msg_buffer.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\mpmc_blocking_q.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\null_mutex.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\os-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\os.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\pattern_formatter-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\pattern_formatter.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\periodic_worker-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\periodic_worker.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\registry-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\registry.h" />
+    <ClInclude Include="vendor\includes\spdlog\details\synchronous_factory.h" />
     <ClInclude Include="vendor\includes\spdlog\details\tcp_client-windows.h" />
     <ClInclude Include="vendor\includes\spdlog\details\thread_pool-inl.h" />
     <ClInclude Include="vendor\includes\spdlog\details\thread_pool.h" />
     <ClInclude Include="vendor\includes\spdlog\details\udp_client-windows.h" />
     <ClInclude Include="vendor\includes\spdlog\details\udp_client.h" />
     <ClInclude Include="vendor\includes\spdlog\details\windows_include.h" />
+    <ClInclude Include="vendor\includes\spdlog\fmt\bin_to_hex.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\chrono.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\color.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\compile.h" />
@@ -613,6 +646,7 @@
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\locale.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\os.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\ostream.h" />
+    <ClInclude Include="vendor\includes\spdlog\fmt\bundled\posix.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\printf.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\ranges.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\bundled\xchar.h" />
@@ -621,10 +655,21 @@
     <ClInclude Include="vendor\includes\spdlog\fmt\ostr.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\ranges.h" />
     <ClInclude Include="vendor\includes\spdlog\fmt\xchar.h" />
+    <ClInclude Include="vendor\includes\spdlog\formatter.h" />
     <ClInclude Include="vendor\includes\spdlog\logger-inl.h" />
     <ClInclude Include="vendor\includes\spdlog\logger.h" />
     <ClInclude Include="vendor\includes\spdlog\pattern_formatter-inl.h" />
     <ClInclude Include="vendor\includes\spdlog\pattern_formatter.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\android_sink.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\ansicolor_sink-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\ansicolor_sink.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\base_sink-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\base_sink.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\basic_file_sink-inl.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\basic_file_sink.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\daily_file_sink.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\dist_sink.h" />
+    <ClInclude Include="vendor\includes\spdlog\sinks\dup_filter_sink.h" />
     <ClInclude Include="vendor\includes\spdlog\sinks\mongo_sink.h" />
     <ClInclude Include="vendor\includes\spdlog\sinks\msvc_sink.h" />
     <ClInclude Include="vendor\includes\spdlog\sinks\null_sink.h" />
@@ -660,6 +705,7 @@
     <ClCompile Include="src\layer\Layer.cpp" />
     <ClCompile Include="src\layer\LayerStack.cpp" />
     <ClCompile Include="src\log\Log.cpp" />
+    <ClCompile Include="src\MiyaEngine.cpp" />
     <ClCompile Include="src\MYpch.cpp" />
     <ClCompile Include="src\window\WindowsInput.cpp" />
     <ClCompile Include="src\window\WinWindow.cpp" />
@@ -670,10 +716,10 @@
     <ClCompile Include="vendor\includes\Imgui\imgui_draw.cpp" />
     <ClCompile Include="vendor\includes\Imgui\imgui_impl_glfw.cpp" />
     <ClCompile Include="vendor\includes\Imgui\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="vendor\includes\Imgui\imgui_tables.cpp" />
     <ClCompile Include="vendor\includes\Imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="vendor\includes\assimp\color4.inl" />
     <None Include="vendor\includes\assimp\material.inl" />
     <None Include="vendor\includes\assimp\matrix3x3.inl" />
@@ -817,6 +863,11 @@
     <None Include="vendor\includes\glm\gtx\vector_angle.inl" />
     <None Include="vendor\includes\glm\gtx\vector_query.inl" />
     <None Include="vendor\includes\glm\gtx\wrap.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="vendor\libs\assimpd.lib" />
+    <Library Include="vendor\libs\freetyped.lib" />
+    <Library Include="vendor\libs\glfw3.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
