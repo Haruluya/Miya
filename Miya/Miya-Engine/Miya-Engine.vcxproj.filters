@@ -1659,7 +1659,7 @@
     <ClInclude Include="vendor\includes\Imgui\imstb_truetype.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\render\Shader.h">
+    <ClInclude Include="src\render\Shader_.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\utils\Random.h">
@@ -1669,6 +1669,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\render\Renderer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\Model_.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\Mesh_.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\Camera_.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1727,13 +1736,22 @@
     <ClCompile Include="src\MiyaEngine.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\render\Shader.cpp">
+    <ClCompile Include="src\render\Shader_.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\utils\Random.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\utils\Image.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\Model_.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\Mesh_.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\Camera_.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

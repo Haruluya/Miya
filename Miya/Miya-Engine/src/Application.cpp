@@ -20,6 +20,7 @@ namespace Miya {
 		{
 			// Initialize core
 			Log::Init();
+			MY_CORE_INFO("Log init!");
 		}
 
 		MY_CORE_ASSERT(!s_Instance, "Application already exists!");
@@ -36,12 +37,19 @@ namespace Miya {
 
 	void Application::PushLayer(Layer* layer)
 	{
+		MY_CORE_INFO("push layer a");
 		m_LayerStack.PushLayer(layer);
+
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
 		m_LayerStack.PushOverlay(layer);
+	}
+
+	void Application::PopLayer(Layer* layer)
+	{
+		m_LayerStack.PopLayer(layer);
 	}
 
 	void Application::OnEvent(Event& e)
@@ -55,6 +63,8 @@ namespace Miya {
 			if (e.Handled)
 				break;
 		}
+
+
 	}
 
 	void Application::Run()
@@ -65,9 +75,9 @@ namespace Miya {
 			Timestep timestep = time - m_LastFrameTime;
 			m_LastFrameTime = time;
 
-			for (Layer* layer : m_LayerStack)
+			for (Layer* layer : m_LayerStack) {
 				layer->OnUpdate(timestep);
-
+			}
 			m_ImGuiLayer->Begin();
 			for (Layer* layer : m_LayerStack)
 				layer->OnImGuiRender();

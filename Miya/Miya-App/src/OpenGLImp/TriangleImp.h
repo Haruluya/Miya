@@ -4,14 +4,13 @@ namespace MiyaApp {
 
 	class TriangleImp : public Miya::Renderer{
 	public:
-		void Render();
-		void Init();
-		void destory();
+		virtual void Render();
+		virtual void Init();
+		virtual void Destory();
 	private:
 		unsigned int shaderProgram;
 		unsigned int VBO;
 		unsigned int VAO;
-		unsigned int EBO;
-
+		Miya::Shader_* shader;
 	};
 }

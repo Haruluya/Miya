@@ -12,7 +12,7 @@ namespace Miya {
 		unsigned int Width;
 		unsigned int Height;
 
-		WindowProps(const std::string& title = "Miya",
+		WindowProps(const std::string& title = "Miya-Haruluya",
 			unsigned int width = 1280,
 			unsigned int height = 720)
 			: Title(title), Width(width), Height(height)

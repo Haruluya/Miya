@@ -163,8 +163,11 @@
     <ClInclude Include="src\log\Log.h" />
     <ClInclude Include="src\MiyaEngine.h" />
     <ClInclude Include="src\MYpch.h" />
+    <ClInclude Include="src\render\Camera_.h" />
+    <ClInclude Include="src\render\Mesh_.h" />
+    <ClInclude Include="src\render\Model_.h" />
     <ClInclude Include="src\render\Renderer.h" />
-    <ClInclude Include="src\render\Shader.h" />
+    <ClInclude Include="src\render\Shader_.h" />
     <ClInclude Include="src\utils\Image.h" />
     <ClInclude Include="src\utils\Random.h" />
     <ClInclude Include="src\utils\Timestep.h" />
@@ -711,7 +714,10 @@
     <ClCompile Include="src\log\Log.cpp" />
     <ClCompile Include="src\MiyaEngine.cpp" />
     <ClCompile Include="src\MYpch.cpp" />
-    <ClCompile Include="src\render\Shader.cpp" />
+    <ClCompile Include="src\render\Camera_.cpp" />
+    <ClCompile Include="src\render\Mesh_.cpp" />
+    <ClCompile Include="src\render\Model_.cpp" />
+    <ClCompile Include="src\render\Shader_.cpp" />
     <ClCompile Include="src\utils\Image.cpp" />
     <ClCompile Include="src\utils\Random.cpp" />
     <ClCompile Include="src\window\WindowsInput.cpp" />

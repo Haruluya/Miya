@@ -24,6 +24,24 @@
     <ClInclude Include="src\OpenGLImp\TriangleImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\OpenGLImp\InitImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\TextureImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MApch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\TransformImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\PerspectiveImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\CameraControllImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -35,9 +53,84 @@
     <ClCompile Include="src\OpenGLImp\TriangleImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\OpenGLImp\InitImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\TextureImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MApch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\TransformImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\PerspectiveImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\CameraControllImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.vs" />
-    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.fs" />
+    <Text Include="resource\shaders\TextureImp_F.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="resource\shaders\TextureImp_V.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="resource\shaders\TriangleImp_F.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="resource\shaders\TriangleImp_V.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+    <Text Include="resource\shaders\TransformImp_V.txt" />
+    <Text Include="resource\Shaders\TransformImp_F.txt" />
+    <Text Include="resource\shaders\PerspectiveImp_F.txt" />
+    <Text Include="resource\shaders\PerspectiveImp_V.txt" />
+    <Text Include="resource\shaders\CameraControllImp_V.txt" />
+    <Text Include="resource\shaders\CameraControllImp_F.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\images\awesomeface.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\blending_transparent_window.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\container.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\container2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\container2_specular.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\marble.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\metal.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\haruluya.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\HuangGuan.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\wrong.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\wrong1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\wrong3.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\wrong2.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

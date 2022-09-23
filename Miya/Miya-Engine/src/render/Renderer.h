@@ -2,8 +2,8 @@
 namespace Miya {
 	class Renderer {
 	public:
-		 virtual void Render();
-		 virtual void Init();
-		 virtual void Destory();
+		virtual void Render() {};
+		virtual void Init() {};
+		virtual void Destory() {};
 	};
 }

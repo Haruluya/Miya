@@ -121,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\Miya-Engine\resource;..\Miya-Engine\src;..\Miya-Engine\vendor\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;..\Miya-Engine\resource;..\Miya-Engine\src;..\Miya-Engine\vendor\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,16 +153,51 @@
   <ItemGroup>
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\AppLayer.h" />
+    <ClInclude Include="src\OpenGLImp\CameraControllImp.h" />
+    <ClInclude Include="src\OpenGLImp\InitImp.h" />
+    <ClInclude Include="src\MApch.h" />
+    <ClInclude Include="src\OpenGLImp\PerspectiveImp.h" />
+    <ClInclude Include="src\OpenGLImp\TextureImp.h" />
+    <ClInclude Include="src\OpenGLImp\TransformImp.h" />
     <ClInclude Include="src\OpenGLImp\TriangleImp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\AppLayer.cpp" />
+    <ClCompile Include="src\OpenGLImp\CameraControllImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\InitImp.cpp" />
+    <ClCompile Include="src\MApch.cpp" />
+    <ClCompile Include="src\OpenGLImp\PerspectiveImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\TextureImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\TransformImp.cpp" />
     <ClCompile Include="src\OpenGLImp\TriangleImp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.fs" />
-    <None Include="src\OpenGLImp\ShaderContent\TriangleImp.vs" />
+    <Text Include="resource\shaders\CameraControllImp_F.txt" />
+    <Text Include="resource\shaders\CameraControllImp_V.txt" />
+    <Text Include="resource\shaders\PerspectiveImp_F.txt" />
+    <Text Include="resource\shaders\PerspectiveImp_V.txt" />
+    <Text Include="resource\shaders\TextureImp_F.txt" />
+    <Text Include="resource\shaders\TextureImp_V.txt" />
+    <Text Include="resource\Shaders\TransformImp_F.txt" />
+    <Text Include="resource\shaders\TransformImp_V.txt" />
+    <Text Include="resource\shaders\TriangleImp_F.txt" />
+    <Text Include="resource\shaders\TriangleImp_V.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\images\awesomeface.png" />
+    <Image Include="resource\images\blending_transparent_window.png" />
+    <Image Include="resource\images\container.jpg" />
+    <Image Include="resource\images\container2.png" />
+    <Image Include="resource\images\container2_specular.png" />
+    <Image Include="resource\images\haruluya.jpg" />
+    <Image Include="resource\images\HuangGuan.png" />
+    <Image Include="resource\images\marble.jpg" />
+    <Image Include="resource\images\metal.png" />
+    <Image Include="resource\images\wrong.png" />
+    <Image Include="resource\images\wrong1.png" />
+    <Image Include="resource\images\wrong2.png" />
+    <Image Include="resource\images\wrong3.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

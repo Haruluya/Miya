@@ -8,12 +8,13 @@ namespace MiyaApp {
 	public:
 		AppLayer();
 		virtual ~AppLayer();
-
+		void SetRenderer(Miya::Renderer*);
 		virtual void OnAttach() override;
 		virtual void OnDetach() override;
 		virtual void OnEvent(Miya::Event& event) override;
 		virtual void OnUpdate(Miya::Timestep ts) override;
 		virtual void OnImGuiRender() override;
+
 	private:
 
 		Miya::Renderer* renderer;

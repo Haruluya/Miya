@@ -8,8 +8,8 @@
 
 #include "imgui/ImGuiLayer.h"
 
-#define MIYA_WINDOW_WIDTH 1600
-#define MIYA_WINDOW_HEIGHT 900
+#define MIYA_WINDOW_WIDTH 1280
+#define MIYA_WINDOW_HEIGHT 720
 
 
 
@@ -18,7 +18,7 @@ namespace Miya {
 	class Application
 	{
 	public:
-		Application(const std::string& name = "Miya", uint32_t width = MIYA_WINDOW_WIDTH, uint32_t height = MIYA_WINDOW_HEIGHT);
+		Application(const std::string& name = "Miya-Haruluya", uint32_t width = MIYA_WINDOW_WIDTH, uint32_t height = MIYA_WINDOW_HEIGHT);
 		virtual ~Application() = default;
 
 		void Run();
@@ -27,7 +27,7 @@ namespace Miya {
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
-
+		void PopLayer(Layer* layer);
 		inline Window& GetWindow() { return *m_Window; }
 
 		inline static Application& Get() { return *s_Instance; }

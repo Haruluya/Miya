@@ -40,7 +40,11 @@
 #include "utils/Random.h"
 //------------------------------
 
-
+//-----render-------------------
 #include "render/Renderer.h"
+#include "render/Shader_.h"
+#include "render/Camera_.h"
+#include "render/Mesh_.h"
+//------------------------------
 
-#include "log/Log.h"
+

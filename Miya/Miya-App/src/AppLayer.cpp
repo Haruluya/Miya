@@ -1,7 +1,16 @@
 #include "AppLayer.h"
 #include "OpenGLImp/TriangleImp.h"
+#include "OpenGLImp/TextureImp.h"
+#include "OpenGLImp/TransformImp.h"
+#include "OpenGLImp/PerspectiveImp.h"
+#include "OpenGLImp/CameraControllImp.h"
 
+
+#include "App.h"
 namespace MiyaApp {
+
+	void DrawMainAppFrame();
+
 
 	AppLayer::AppLayer()
 	{
@@ -16,8 +25,9 @@ namespace MiyaApp {
 		//EnableGLDebugging();
 
 		// Init here
-		renderer = new TriangleImp();
+		renderer = new CameraControllImp();
 		renderer->Init();
+		MY_INFO("AppLayer init!");
 
 	}
 
@@ -25,6 +35,7 @@ namespace MiyaApp {
 	{
 		// Shutdown here
 		renderer->Destory();
+		MY_INFO("AppLayer destory!");
 	}
 
 	void AppLayer::OnEvent(Miya::Event& event)
@@ -35,13 +46,90 @@ namespace MiyaApp {
 	void AppLayer::OnUpdate(Miya::Timestep ts)
 	{
 		// Render here
+		//MY_INFO("AppLayer Update!");
 		renderer->Render();
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
 	}
 
 	void AppLayer::OnImGuiRender()
 	{
+		// Render switch frame.
+		DrawMainAppFrame();
+	}
+
+	void AppLayer::SetRenderer(Miya::Renderer* r)
+	{
+		renderer = r;
+	}
+
+
+
+	void DrawMainAppFrame() {
+		bool main_app_frame = true;
+		bool test1 = false;
+		bool test2 = false;
+		// Main menu bar.
+		if (ImGui::BeginMainMenuBar())
+		{
+			if (ImGui::BeginMenu("File"))
+			{
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Edit"))
+			{
+				if (ImGui::MenuItem("Undo", "CTRL+Z")) {}
+				if (ImGui::MenuItem("Redo", "CTRL+Y", false, false)) {}  // Disabled item
+				ImGui::Separator();
+				if (ImGui::MenuItem("Cut", "CTRL+X")) {}
+				if (ImGui::MenuItem("Copy", "CTRL+C")) {}
+				if (ImGui::MenuItem("Paste", "CTRL+V")) {}
+				ImGui::EndMenu();
+			}
+			ImGui::EndMainMenuBar();
+		}
+
+		// Main body of the Demo window starts here.
+		if (!ImGui::Begin("Miya(Haruluya)", &main_app_frame))
+		{
+			// Early out if the window is collapsed, as an optimization.
+			ImGui::End();
+			return;
+		}
+
+
+		// e.g. Leave a fixed amount of width for labels (by passing a negative value), the rest goes to widgets.
+		ImGui::PushItemWidth(ImGui::GetFontSize() * -12);
+
+		if (ImGui::BeginMenuBar()) {
+			if (ImGui::BeginMenu("Menu")) {
+				ImGui::MenuItem("test1", NULL, &test1);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Setting")) {
+				ImGui::MenuItem("test2", NULL, &test2);
+				ImGui::EndMenu();
+			}
+			if (ImGui::BeginMenu("Tool")) {
+				ImGui::EndMenu();
+			}
+			ImGui::EndMenuBar();
+		}
+
+		ImGui::Text("Wecome to leran cg with Miya.");
+		ImGui::Spacing();
+		if (ImGui::CollapsingHeader("OpenGL Example")) {
+			if (ImGui::TreeNode("TriangleImp")) {
+				ImGui::Text("Draw a Triangle to begin cg programing!");
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					Miya::Application::Get().PushLayer(new AppLayer());
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+		}
+		ImGui::End();
+
+
 	}
 
 

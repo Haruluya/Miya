@@ -1,19 +1,25 @@
-#include "MiyaEngine.h"
+#include "App.h"
 #include "AppLayer.h"
+#include "OpenGLImp/InitImp.h"
+namespace MiyaApp {
+	
+	AppLayer* App::m_nlayer = nullptr;
 
-
-class App : public Miya::Application
-{
-public:
-	App()
-	{
-		PushLayer(new MiyaApp::AppLayer());
+	App::App() {
 	}
-};
+
+	void App::Init() {
+		m_nlayer = new MiyaApp::AppLayer();
+		m_nlayer->SetRenderer(new InitImp());
+		PushLayer(m_nlayer);
+	}
+}
+
 
 int main()
 {
-	std::unique_ptr<App> app = std::make_unique<App>();
+	std::unique_ptr<MiyaApp::App> app = std::make_unique<MiyaApp::App>();
+	app->Init();
 	app->Run();
 	return 0;
 }
