@@ -163,6 +163,7 @@
     <ClInclude Include="src\log\Log.h" />
     <ClInclude Include="src\MiyaEngine.h" />
     <ClInclude Include="src\MYpch.h" />
+    <ClInclude Include="src\render\CameraController.h" />
     <ClInclude Include="src\render\Camera_.h" />
     <ClInclude Include="src\render\Mesh_.h" />
     <ClInclude Include="src\render\Model_.h" />
@@ -714,6 +715,7 @@
     <ClCompile Include="src\log\Log.cpp" />
     <ClCompile Include="src\MiyaEngine.cpp" />
     <ClCompile Include="src\MYpch.cpp" />
+    <ClCompile Include="src\render\CameraController.cpp" />
     <ClCompile Include="src\render\Camera_.cpp" />
     <ClCompile Include="src\render\Mesh_.cpp" />
     <ClCompile Include="src\render\Model_.cpp" />

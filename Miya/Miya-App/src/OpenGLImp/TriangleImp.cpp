@@ -5,7 +5,7 @@
 #include "MiyaEngine.h"
 #include "TriangleImp.h"
 namespace MiyaApp {
-    void TriangleImp::Render(){
+    void TriangleImp::Render(Miya::Timestep ts){
 
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);

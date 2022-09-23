@@ -126,7 +126,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;freetyped.lib;glfw3.lib;assimpd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlibstaticd.lib;opengl32.lib;freetyped.lib;glfw3.lib;assimpd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -156,6 +156,7 @@
     <ClInclude Include="src\OpenGLImp\CameraControllImp.h" />
     <ClInclude Include="src\OpenGLImp\InitImp.h" />
     <ClInclude Include="src\MApch.h" />
+    <ClInclude Include="src\OpenGLImp\ModelLoadImp.h" />
     <ClInclude Include="src\OpenGLImp\PerspectiveImp.h" />
     <ClInclude Include="src\OpenGLImp\TextureImp.h" />
     <ClInclude Include="src\OpenGLImp\TransformImp.h" />
@@ -167,6 +168,7 @@
     <ClCompile Include="src\OpenGLImp\CameraControllImp.cpp" />
     <ClCompile Include="src\OpenGLImp\InitImp.cpp" />
     <ClCompile Include="src\MApch.cpp" />
+    <ClCompile Include="src\OpenGLImp\ModelLoadImp.cpp" />
     <ClCompile Include="src\OpenGLImp\PerspectiveImp.cpp" />
     <ClCompile Include="src\OpenGLImp\TextureImp.cpp" />
     <ClCompile Include="src\OpenGLImp\TransformImp.cpp" />
@@ -175,6 +177,8 @@
   <ItemGroup>
     <Text Include="resource\shaders\CameraControllImp_F.txt" />
     <Text Include="resource\shaders\CameraControllImp_V.txt" />
+    <Text Include="resource\shaders\ModelLoadImp_F.txt" />
+    <Text Include="resource\shaders\ModelLoadImp_V.txt" />
     <Text Include="resource\shaders\PerspectiveImp_F.txt" />
     <Text Include="resource\shaders\PerspectiveImp_V.txt" />
     <Text Include="resource\shaders\TextureImp_F.txt" />
@@ -185,19 +189,11 @@
     <Text Include="resource\shaders\TriangleImp_V.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resource\images\awesomeface.png" />
-    <Image Include="resource\images\blending_transparent_window.png" />
-    <Image Include="resource\images\container.jpg" />
-    <Image Include="resource\images\container2.png" />
-    <Image Include="resource\images\container2_specular.png" />
     <Image Include="resource\images\haruluya.jpg" />
+    <Image Include="resource\images\haruluya_bd.jpg" />
     <Image Include="resource\images\HuangGuan.png" />
-    <Image Include="resource\images\marble.jpg" />
-    <Image Include="resource\images\metal.png" />
     <Image Include="resource\images\wrong.png" />
     <Image Include="resource\images\wrong1.png" />
-    <Image Include="resource\images\wrong2.png" />
-    <Image Include="resource\images\wrong3.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -12,6 +12,8 @@ namespace Miya {
 
 
 	static bool s_GLFWInitialized = false;
+	static bool s_ShowCur = true;
+
 
 	static void GLFWErrorCallback(int error, const char* description)
 	{
@@ -61,6 +63,10 @@ namespace Miya {
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
+
+
+
+
 		// Set GLFW callbacks
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
 			{
@@ -104,6 +110,22 @@ namespace Miya {
 					break;
 				}
 				}
+				if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+					glfwSetWindowShouldClose(window, true);
+				}
+
+				if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
+				{
+					if (s_ShowCur) {
+						glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+						s_ShowCur = false;
+					}
+					else {
+						glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+						s_ShowCur = true;
+					}
+				}
+
 			});
 
 		glfwSetCharCallback(m_Window, [](GLFWwindow* window, uint32_t keycode)
@@ -161,6 +183,7 @@ namespace Miya {
 	{
 		glfwPollEvents();
 		glfwSwapBuffers(m_Window);
+			
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)

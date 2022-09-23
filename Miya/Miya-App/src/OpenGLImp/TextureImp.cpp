@@ -3,7 +3,7 @@
 
 #include "stb_image.h"
 namespace MiyaApp {
-	void TextureImp::Render()
+	void TextureImp::Render(Miya::Timestep ts)
 	{
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);

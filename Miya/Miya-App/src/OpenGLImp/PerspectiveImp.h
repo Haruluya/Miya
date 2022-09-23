@@ -4,9 +4,10 @@ namespace MiyaApp {
 
 	class PerspectiveImp : public Miya::Renderer {
 	public:
-		virtual void Render();
+		virtual void Render(Miya::Timestep ts);
 		virtual void Init();
 		virtual void Destory();
+		virtual void OnEvent(Miya::Event& e) {};
 	private:
 		Miya::Shader_* shader;
 		unsigned int VBO;

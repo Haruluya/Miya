@@ -9,7 +9,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 namespace MiyaApp {
-	void TransformImp::Render()
+	void TransformImp::Render(Miya::Timestep ts)
 	{
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);

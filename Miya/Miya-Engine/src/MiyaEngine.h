@@ -26,6 +26,7 @@
 #include "event/Input.h"
 #include "event/KeyCodes.h"
 #include "event/MouseButtonCodes.h"
+#include "event/Event.h"
 //------------------------------
 
 
@@ -44,7 +45,9 @@
 #include "render/Renderer.h"
 #include "render/Shader_.h"
 #include "render/Camera_.h"
+#include "render/CameraController.h"
 #include "render/Mesh_.h"
+#include "render/Model_.h"
 //------------------------------
 
 

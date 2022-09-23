@@ -4,7 +4,7 @@
 #include "OpenGLImp/TransformImp.h"
 #include "OpenGLImp/PerspectiveImp.h"
 #include "OpenGLImp/CameraControllImp.h"
-
+#include "OpenGLImp/ModelLoadImp.h"
 
 #include "App.h"
 namespace MiyaApp {
@@ -41,13 +41,14 @@ namespace MiyaApp {
 	void AppLayer::OnEvent(Miya::Event& event)
 	{
 		// Events here
+		renderer->OnEvent(event);
 	}
 
 	void AppLayer::OnUpdate(Miya::Timestep ts)
 	{
 		// Render here
 		//MY_INFO("AppLayer Update!");
-		renderer->Render();
+		renderer->Render(ts);
 	}
 
 	void AppLayer::OnImGuiRender()

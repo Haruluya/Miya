@@ -39,6 +39,8 @@ namespace Miya {
 		};
 
 		WindowData m_Data;
+
+
 	};
 
 }

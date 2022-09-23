@@ -13,6 +13,7 @@
 #include <unordered_set>
 
 #include "log/Log.h"
+#include "utils/Timestep.h"
 
 #ifdef GLCORE_PLATFORM_WINDOWS
 #include <Windows.h>

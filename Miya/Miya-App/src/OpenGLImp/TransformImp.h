@@ -4,9 +4,10 @@ namespace MiyaApp {
 
 	class TransformImp : public Miya::Renderer {
 	public:
-		virtual void Render();
+		virtual void Render(Miya::Timestep ts);
 		virtual void Init();
 		virtual void Destory();
+		virtual void OnEvent(Miya::Event& e) {};
 	private:
 		unsigned int VBO;
 		unsigned int VAO;

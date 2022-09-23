@@ -5,18 +5,13 @@
 
 namespace MiyaApp {
 
-    Camera_ camera(glm::vec3(0.0f, 0.0f, 3.0f));
-    float lastX = MIYA_WINDOW_WIDTH / 2.0f;
-    float lastY = MIYA_WINDOW_HEIGHT / 2.0f;
-    bool firstMouse = true;
-    float deltaTime = 0.0;
-    float lastFrame = 0.0;
 
-	void CameraControllImp::Render()
+
+	void CameraControllImp::Render(Miya::Timestep ts)
 	{
         float currentFrame = static_cast<float>(glfwGetTime());
-        deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
+        m_CameraController->GetCamera().deltaTime = currentFrame - m_CameraController->GetCamera().lastFrame;
+        m_CameraController->GetCamera().lastFrame = currentFrame;
 
         // render
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
@@ -32,11 +27,11 @@ namespace MiyaApp {
         shader->use();
 
         // pass projection matrix to shader (note that in this case it could change every frame)
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)MIYA_WINDOW_WIDTH / (float)MIYA_WINDOW_HEIGHT, 0.1f, 100.0f);
+        glm::mat4 projection = glm::perspective(glm::radians(m_CameraController->GetCamera().Zoom), (float)MIYA_WINDOW_WIDTH / (float)MIYA_WINDOW_HEIGHT, 0.1f, 100.0f);
         shader->setMat4("projection", projection);
 
         // camera/view transformation
-        glm::mat4 view = camera.GetViewMatrix();
+        glm::mat4 view = m_CameraController->GetCamera().GetViewMatrix();
         shader->setMat4("view", view);
 
         // render boxes
@@ -52,10 +47,16 @@ namespace MiyaApp {
 
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
+
+        m_CameraController->OnUpdate(ts);
 	}
 	void CameraControllImp::Init()
 	{
         glEnable(GL_DEPTH_TEST);
+
+        m_CameraController = new Miya::CameraController(1280.0f / 720.0f);
+
+
 
         // ------------------------------------
         shader = new Miya::Shader_("resource/shaders/CameraControllImp_V.txt", "resource/shaders/CameraControllImp_F.txt");
@@ -190,5 +191,10 @@ namespace MiyaApp {
         glDeleteVertexArrays(1, &VAO);
         glDeleteBuffers(1, &VBO);
 	}
+
+    void CameraControllImp::OnEvent(Miya::Event& e)
+    {
+        m_CameraController->OnEvent(e);
+    }
 
 }
