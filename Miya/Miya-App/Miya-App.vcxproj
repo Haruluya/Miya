@@ -126,7 +126,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>zlibstaticd.lib;opengl32.lib;freetyped.lib;glfw3.lib;assimpd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlibstaticd.lib;opengl32.lib;freetyped.lib;glfw3.lib;assimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,26 +153,28 @@
   <ItemGroup>
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\AppLayer.h" />
-    <ClInclude Include="src\OpenGLImp\CameraControllImp.h" />
-    <ClInclude Include="src\OpenGLImp\InitImp.h" />
+    <ClInclude Include="src\OpenGLImp\CoreBase\CameraControllImp.h" />
+    <ClInclude Include="src\OpenGLImp\CoreBase\InitImp.h" />
     <ClInclude Include="src\MApch.h" />
-    <ClInclude Include="src\OpenGLImp\ModelLoadImp.h" />
-    <ClInclude Include="src\OpenGLImp\PerspectiveImp.h" />
-    <ClInclude Include="src\OpenGLImp\TextureImp.h" />
-    <ClInclude Include="src\OpenGLImp\TransformImp.h" />
-    <ClInclude Include="src\OpenGLImp\TriangleImp.h" />
+    <ClInclude Include="src\OpenGLImp\CoreBase\ModelLoadImp.h" />
+    <ClInclude Include="src\OpenGLImp\CoreBase\PerspectiveImp.h" />
+    <ClInclude Include="src\OpenGLImp\BasicLight\PhoneImp.h" />
+    <ClInclude Include="src\OpenGLImp\CoreBase\TextureImp.h" />
+    <ClInclude Include="src\OpenGLImp\CoreBase\TransformImp.h" />
+    <ClInclude Include="src\OpenGLImp\CoreBase\TriangleImp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\AppLayer.cpp" />
-    <ClCompile Include="src\OpenGLImp\CameraControllImp.cpp" />
-    <ClCompile Include="src\OpenGLImp\InitImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\CoreBase\CameraControllImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\CoreBase\InitImp.cpp" />
     <ClCompile Include="src\MApch.cpp" />
-    <ClCompile Include="src\OpenGLImp\ModelLoadImp.cpp" />
-    <ClCompile Include="src\OpenGLImp\PerspectiveImp.cpp" />
-    <ClCompile Include="src\OpenGLImp\TextureImp.cpp" />
-    <ClCompile Include="src\OpenGLImp\TransformImp.cpp" />
-    <ClCompile Include="src\OpenGLImp\TriangleImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\CoreBase\ModelLoadImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\CoreBase\PerspectiveImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\BasicLight\PhoneImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\CoreBase\TextureImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\CoreBase\TransformImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\CoreBase\TriangleImp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource\shaders\CameraControllImp_F.txt" />
@@ -181,6 +183,10 @@
     <Text Include="resource\shaders\ModelLoadImp_V.txt" />
     <Text Include="resource\shaders\PerspectiveImp_F.txt" />
     <Text Include="resource\shaders\PerspectiveImp_V.txt" />
+    <Text Include="resource\shaders\PhoneImp_F.txt" />
+    <Text Include="resource\shaders\PhoneImp_Light_F.txt" />
+    <Text Include="resource\shaders\PhoneImp_Light_V.txt" />
+    <Text Include="resource\shaders\PhoneImp_V.txt" />
     <Text Include="resource\shaders\TextureImp_F.txt" />
     <Text Include="resource\shaders\TextureImp_V.txt" />
     <Text Include="resource\Shaders\TransformImp_F.txt" />

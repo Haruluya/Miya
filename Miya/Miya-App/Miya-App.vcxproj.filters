@@ -21,28 +21,31 @@
     <ClInclude Include="src\AppLayer.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\OpenGLImp\TriangleImp.h">
+    <ClInclude Include="src\OpenGLImp\CoreBase\TriangleImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\OpenGLImp\InitImp.h">
+    <ClInclude Include="src\OpenGLImp\CoreBase\InitImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\OpenGLImp\TextureImp.h">
+    <ClInclude Include="src\OpenGLImp\CoreBase\TextureImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\MApch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\OpenGLImp\TransformImp.h">
+    <ClInclude Include="src\OpenGLImp\CoreBase\TransformImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\OpenGLImp\PerspectiveImp.h">
+    <ClInclude Include="src\OpenGLImp\CoreBase\PerspectiveImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\OpenGLImp\CameraControllImp.h">
+    <ClInclude Include="src\OpenGLImp\CoreBase\CameraControllImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\OpenGLImp\ModelLoadImp.h">
+    <ClInclude Include="src\OpenGLImp\CoreBase\ModelLoadImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\BasicLight\PhoneImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,28 +56,31 @@
     <ClCompile Include="src\AppLayer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\OpenGLImp\TriangleImp.cpp">
+    <ClCompile Include="src\OpenGLImp\CoreBase\TriangleImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\OpenGLImp\InitImp.cpp">
+    <ClCompile Include="src\OpenGLImp\CoreBase\InitImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\OpenGLImp\TextureImp.cpp">
+    <ClCompile Include="src\OpenGLImp\CoreBase\TextureImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\MApch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\OpenGLImp\TransformImp.cpp">
+    <ClCompile Include="src\OpenGLImp\CoreBase\TransformImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\OpenGLImp\PerspectiveImp.cpp">
+    <ClCompile Include="src\OpenGLImp\CoreBase\PerspectiveImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\OpenGLImp\CameraControllImp.cpp">
+    <ClCompile Include="src\OpenGLImp\CoreBase\CameraControllImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\OpenGLImp\ModelLoadImp.cpp">
+    <ClCompile Include="src\OpenGLImp\CoreBase\ModelLoadImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\BasicLight\PhoneImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -99,6 +105,10 @@
     <Text Include="resource\shaders\CameraControllImp_F.txt" />
     <Text Include="resource\shaders\ModelLoadImp_V.txt" />
     <Text Include="resource\shaders\ModelLoadImp_F.txt" />
+    <Text Include="resource\shaders\PhoneImp_V.txt" />
+    <Text Include="resource\shaders\PhoneImp_F.txt" />
+    <Text Include="resource\shaders\PhoneImp_Light_V.txt" />
+    <Text Include="resource\shaders\PhoneImp_Light_F.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\images\haruluya.jpg">

@@ -1,10 +1,16 @@
 #include "AppLayer.h"
-#include "OpenGLImp/TriangleImp.h"
-#include "OpenGLImp/TextureImp.h"
-#include "OpenGLImp/TransformImp.h"
-#include "OpenGLImp/PerspectiveImp.h"
-#include "OpenGLImp/CameraControllImp.h"
-#include "OpenGLImp/ModelLoadImp.h"
+
+
+#include "OpenGLImp/CoreBase/TriangleImp.h"
+#include "OpenGLImp/CoreBase/TextureImp.h"
+#include "OpenGLImp/CoreBase/TransformImp.h"
+#include "OpenGLImp/CoreBase/PerspectiveImp.h"
+#include "OpenGLImp/CoreBase/CameraControllImp.h"
+#include "OpenGLImp/CoreBase/ModelLoadImp.h"
+
+
+#include "OpenGLImp/BasicLight/PhoneImp.h"
+
 
 #include "App.h"
 namespace MiyaApp {
@@ -25,7 +31,7 @@ namespace MiyaApp {
 		//EnableGLDebugging();
 
 		// Init here
-		renderer = new CameraControllImp();
+		renderer = new PhoneImp();
 		renderer->Init();
 		MY_INFO("AppLayer init!");
 
