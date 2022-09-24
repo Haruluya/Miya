@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\AppLayer.h" />
+    <ClInclude Include="src\OpenGLImp\BasicLight\LightingMapImp.h" />
     <ClInclude Include="src\OpenGLImp\CoreBase\CameraControllImp.h" />
     <ClInclude Include="src\OpenGLImp\CoreBase\InitImp.h" />
     <ClInclude Include="src\MApch.h" />
@@ -166,6 +167,7 @@
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\AppLayer.cpp" />
+    <ClCompile Include="src\OpenGLImp\BasicLight\LightingMapImp.cpp" />
     <ClCompile Include="src\OpenGLImp\CoreBase\CameraControllImp.cpp" />
     <ClCompile Include="src\OpenGLImp\CoreBase\InitImp.cpp" />
     <ClCompile Include="src\MApch.cpp" />
@@ -179,6 +181,10 @@
   <ItemGroup>
     <Text Include="resource\shaders\CameraControllImp_F.txt" />
     <Text Include="resource\shaders\CameraControllImp_V.txt" />
+    <Text Include="resource\shaders\LightingMapImp_F.txt" />
+    <Text Include="resource\shaders\LightingMapImp_Light_F.txt" />
+    <Text Include="resource\shaders\LightingMapImp_Light_V.txt" />
+    <Text Include="resource\shaders\LightingMapImp_V.txt" />
     <Text Include="resource\shaders\ModelLoadImp_F.txt" />
     <Text Include="resource\shaders\ModelLoadImp_V.txt" />
     <Text Include="resource\shaders\PerspectiveImp_F.txt" />

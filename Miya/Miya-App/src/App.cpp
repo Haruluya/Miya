@@ -1,6 +1,6 @@
 #include "App.h"
 #include "AppLayer.h"
-#include "OpenGLImp/InitImp.h"
+#include "OpenGLImp/CoreBase/InitImp.h"
 namespace MiyaApp {
 	
 	AppLayer* App::m_nlayer = nullptr;

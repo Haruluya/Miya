@@ -10,7 +10,7 @@
 
 
 #include "OpenGLImp/BasicLight/PhoneImp.h"
-
+#include "OpenGLImp/BasicLight/LightingMapImp.h"
 
 #include "App.h"
 namespace MiyaApp {
@@ -31,7 +31,7 @@ namespace MiyaApp {
 		//EnableGLDebugging();
 
 		// Init here
-		renderer = new PhoneImp();
+		renderer = new LightingMapImp();
 		renderer->Init();
 		MY_INFO("AppLayer init!");
 
