@@ -11,6 +11,10 @@
 
 #include "OpenGLImp/BasicLight/PhoneImp.h"
 #include "OpenGLImp/BasicLight/LightingMapImp.h"
+#include "OpenGLImp/BasicLight/MutiLightImp.h"
+
+
+#include "OpenGLImp/OpenglFeatures/CubeMapImp.h"
 
 #include "App.h"
 namespace MiyaApp {
@@ -28,10 +32,9 @@ namespace MiyaApp {
 
 	void AppLayer::OnAttach()
 	{
-		//EnableGLDebugging();
 
 		// Init here
-		renderer = new LightingMapImp();
+		renderer = new CubeMapImp();
 		renderer->Init();
 		MY_INFO("AppLayer init!");
 

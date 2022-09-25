@@ -1683,6 +1683,9 @@
     <ClInclude Include="src\render\CameraController.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\utils\Load.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\imgui\ImGuiBuild.cpp">
@@ -1758,6 +1761,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\render\CameraController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\Load.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

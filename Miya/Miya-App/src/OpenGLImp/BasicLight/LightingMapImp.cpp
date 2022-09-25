@@ -4,7 +4,6 @@
 
 namespace MiyaApp {
 
-    unsigned int loadTexture(const char* path);
 
 	void LightingMapImp::Render(Miya::Timestep ts)
 	{
@@ -146,7 +145,7 @@ namespace MiyaApp {
 
         // load textures (we now use a utility function to keep the code more organized)
         // -----------------------------------------------------------------------------
-        diffuseMap = loadTexture("resource/objects/LightingMapBox/Albedo.jpg");
+        diffuseMap = Miya::Load::loadTexture("resource/objects/LightingMapBox/Albedo.jpg");
 
         // shader configuration
         // --------------------
@@ -166,40 +165,4 @@ namespace MiyaApp {
         m_CameraController->OnEvent(e);
 	}
 
-    unsigned int loadTexture(char const* path)
-    {
-        unsigned int textureID;
-        glGenTextures(1, &textureID);
-
-        int width, height, nrComponents;
-        unsigned char* data = stbi_load(path, &width, &height, &nrComponents, 0);
-        if (data)
-        {
-            GLenum format;
-            if (nrComponents == 1)
-                format = GL_RED;
-            else if (nrComponents == 3)
-                format = GL_RGB;
-            else if (nrComponents == 4)
-                format = GL_RGBA;
-
-            glBindTexture(GL_TEXTURE_2D, textureID);
-            glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
-            glGenerateMipmap(GL_TEXTURE_2D);
-
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-            stbi_image_free(data);
-        }
-        else
-        {
-            MY_ERROR("Texture failed to load at path: {0}",path);
-            stbi_image_free(data);
-        }
-
-        return textureID;
-    }
 }

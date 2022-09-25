@@ -51,6 +51,39 @@
     <ClInclude Include="src\OpenGLImp\BasicLight\LightingMapImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\OpenGLImp\BasicLight\MutiLightImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\DeepTestImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\BlendingImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\GeometryShaderImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\InstancingImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\MSAAImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\CubeMapImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -89,6 +122,39 @@
     <ClCompile Include="src\OpenGLImp\BasicLight\LightingMapImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\OpenGLImp\BasicLight\MutiLightImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\DeepTestImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\BlendingImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\GeometryShaderImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\InstancingImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\MSAAImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\CubeMapImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource\shaders\TextureImp_F.txt">
@@ -119,6 +185,14 @@
     <Text Include="resource\shaders\LightingMapImp_F.txt" />
     <Text Include="resource\shaders\LightingMapImp_Light_V.txt" />
     <Text Include="resource\shaders\LightingMapImp_Light_F.txt" />
+    <Text Include="resource\shaders\MutiLightImp_V.txt" />
+    <Text Include="resource\shaders\MutiLightImp_F.txt" />
+    <Text Include="resource\shaders\MutiLightImp_Light_F.txt" />
+    <Text Include="resource\shaders\MutiLightImp_Light_V.txt" />
+    <Text Include="resource\shaders\CubeMapImp_V.txt" />
+    <Text Include="resource\shaders\CubeMapImp_F.txt" />
+    <Text Include="resource\shaders\CubeMapImp_Skybox_V.txt" />
+    <Text Include="resource\shaders\CubeMapImp_Skybox_F.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\images\haruluya.jpg">

@@ -39,6 +39,7 @@
 //-----utils--------------------
 #include "utils/Timer.h"
 #include "utils/Random.h"
+#include "utils/Load.h"
 //------------------------------
 
 //-----render-------------------
@@ -49,5 +50,6 @@
 #include "render/Mesh_.h"
 #include "render/Model_.h"
 //------------------------------
+
 
 

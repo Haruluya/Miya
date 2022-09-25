@@ -154,6 +154,7 @@
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\AppLayer.h" />
     <ClInclude Include="src\OpenGLImp\BasicLight\LightingMapImp.h" />
+    <ClInclude Include="src\OpenGLImp\BasicLight\MutiLightImp.h" />
     <ClInclude Include="src\OpenGLImp\CoreBase\CameraControllImp.h" />
     <ClInclude Include="src\OpenGLImp\CoreBase\InitImp.h" />
     <ClInclude Include="src\MApch.h" />
@@ -163,11 +164,22 @@
     <ClInclude Include="src\OpenGLImp\CoreBase\TextureImp.h" />
     <ClInclude Include="src\OpenGLImp\CoreBase\TransformImp.h" />
     <ClInclude Include="src\OpenGLImp\CoreBase\TriangleImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\BlendingImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\CubeMapImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\DeepTestImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\GeometryShaderImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\InstancingImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.h" />
+    <ClInclude Include="src\PaperImp\MSAAImp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\AppLayer.cpp" />
     <ClCompile Include="src\OpenGLImp\BasicLight\LightingMapImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\BasicLight\MutiLightImp.cpp" />
     <ClCompile Include="src\OpenGLImp\CoreBase\CameraControllImp.cpp" />
     <ClCompile Include="src\OpenGLImp\CoreBase\InitImp.cpp" />
     <ClCompile Include="src\MApch.cpp" />
@@ -177,16 +189,34 @@
     <ClCompile Include="src\OpenGLImp\CoreBase\TextureImp.cpp" />
     <ClCompile Include="src\OpenGLImp\CoreBase\TransformImp.cpp" />
     <ClCompile Include="src\OpenGLImp\CoreBase\TriangleImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\BlendingImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\CubeMapImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\DeepTestImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\GeometryShaderImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\InstancingImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.cpp" />
+    <ClCompile Include="src\PaperImp\MSAAImp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource\shaders\CameraControllImp_F.txt" />
     <Text Include="resource\shaders\CameraControllImp_V.txt" />
+    <Text Include="resource\shaders\CubeMapImp_F.txt" />
+    <Text Include="resource\shaders\CubeMapImp_Skybox_F.txt" />
+    <Text Include="resource\shaders\CubeMapImp_Skybox_V.txt" />
+    <Text Include="resource\shaders\CubeMapImp_V.txt" />
     <Text Include="resource\shaders\LightingMapImp_F.txt" />
     <Text Include="resource\shaders\LightingMapImp_Light_F.txt" />
     <Text Include="resource\shaders\LightingMapImp_Light_V.txt" />
     <Text Include="resource\shaders\LightingMapImp_V.txt" />
     <Text Include="resource\shaders\ModelLoadImp_F.txt" />
     <Text Include="resource\shaders\ModelLoadImp_V.txt" />
+    <Text Include="resource\shaders\MutiLightImp_F.txt" />
+    <Text Include="resource\shaders\MutiLightImp_Light_F.txt" />
+    <Text Include="resource\shaders\MutiLightImp_Light_V.txt" />
+    <Text Include="resource\shaders\MutiLightImp_V.txt" />
     <Text Include="resource\shaders\PerspectiveImp_F.txt" />
     <Text Include="resource\shaders\PerspectiveImp_V.txt" />
     <Text Include="resource\shaders\PhoneImp_F.txt" />
