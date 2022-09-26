@@ -15,6 +15,7 @@
 
 
 #include "OpenGLImp/OpenglFeatures/CubeMapImp.h"
+#include "OpenGLImp/OpenglFeatures/ShadowMapImp.h"
 
 #include "App.h"
 namespace MiyaApp {
@@ -34,7 +35,7 @@ namespace MiyaApp {
 	{
 
 		// Init here
-		renderer = new CubeMapImp();
+		renderer = new ShadowMapImp();
 		renderer->Init();
 		MY_INFO("AppLayer init!");
 

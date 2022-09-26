@@ -173,6 +173,7 @@
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\ShadowMapImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.h" />
     <ClInclude Include="src\PaperImp\MSAAImp.h" />
   </ItemGroup>
@@ -199,6 +200,7 @@
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\ShadowMapImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.cpp" />
     <ClCompile Include="src\PaperImp\MSAAImp.cpp" />
   </ItemGroup>
@@ -225,6 +227,12 @@
     <Text Include="resource\shaders\PhoneImp_Light_F.txt" />
     <Text Include="resource\shaders\PhoneImp_Light_V.txt" />
     <Text Include="resource\shaders\PhoneImp_V.txt" />
+    <Text Include="resource\shaders\ShadowMapImp_Depth_F.txt" />
+    <Text Include="resource\shaders\ShadowMapImp_Depth_V.txt" />
+    <Text Include="resource\shaders\ShadowMapImp_F.txt" />
+    <Text Include="resource\shaders\ShadowMapImp_Quad_F.txt" />
+    <Text Include="resource\shaders\ShadowMapImp_Quad_V.txt" />
+    <Text Include="resource\shaders\ShadowMapImp_V.txt" />
     <Text Include="resource\shaders\TextureImp_F.txt" />
     <Text Include="resource\shaders\TextureImp_V.txt" />
     <Text Include="resource\Shaders\TransformImp_F.txt" />
