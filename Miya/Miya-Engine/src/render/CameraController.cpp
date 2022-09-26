@@ -24,6 +24,11 @@ namespace Miya {
 			m_Camera.ProcessKeyboard(LEFT, m_Camera.deltaTime);
 		if (Input::IsKeyPressed(Key::D))
 			m_Camera.ProcessKeyboard(RIGHT, m_Camera.deltaTime);
+
+		if (Input::IsKeyPressed(Key::E))
+			m_Camera.ProcessKeyboard(UP, m_Camera.deltaTime);
+		if (Input::IsKeyPressed(Key::Q))
+			m_Camera.ProcessKeyboard(DOWN, m_Camera.deltaTime);
 		//---------------------------------------------------------------
 
 

@@ -29,31 +29,21 @@ namespace MiyaApp {
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
 
-        // draw skybox as last
-        glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
-        shader_skybox->use();
-        view = glm::mat4(glm::mat3(m_CameraController->GetCamera().GetViewMatrix())); // remove translation from the view matrix
-        shader_skybox->setMat4("view", view);
-        shader_skybox->setMat4("projection", projection);
-        // skybox cube
-        glBindVertexArray(skybox_VAO);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_CUBE_MAP, skybox_Texture);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-        glDepthFunc(GL_LESS); // set depth function back to default
+        m_Skybox->Render(ts,view,projection);
         m_CameraController->OnUpdate(ts);
 	}
 	void CubeMapImp::Init()
 	{
+        m_Skybox = new SkyBox();
 
+        m_Skybox->Init();
         glEnable(GL_DEPTH_TEST);
         m_CameraController = new Miya::CameraController(1280.0f / 720.0f);
         lightPos = new glm::vec3(1.2f, 1.0f, 2.0f);
         // build and compile shaders
         // -------------------------
         shader_obj = new Miya::Shader_("resource/shaders/CubeMapImp_V.txt", "resource/shaders/CubeMapImp_F.txt");
-        shader_skybox = new Miya::Shader_("resource/shaders/CubeMapImp_Skybox_V.txt", "resource/shaders/CubeMapImp_Skybox_F.txt");
+   
 
         // set up vertex data (and buffer(s)) and configure vertex attributes
         // ------------------------------------------------------------------
@@ -101,50 +91,6 @@ namespace MiyaApp {
             -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
             -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
         };
-        float skyboxVertices[] = {
-            // positions          
-            -1.0f,  1.0f, -1.0f,
-            -1.0f, -1.0f, -1.0f,
-             1.0f, -1.0f, -1.0f,
-             1.0f, -1.0f, -1.0f,
-             1.0f,  1.0f, -1.0f,
-            -1.0f,  1.0f, -1.0f,
-
-            -1.0f, -1.0f,  1.0f,
-            -1.0f, -1.0f, -1.0f,
-            -1.0f,  1.0f, -1.0f,
-            -1.0f,  1.0f, -1.0f,
-            -1.0f,  1.0f,  1.0f,
-            -1.0f, -1.0f,  1.0f,
-
-             1.0f, -1.0f, -1.0f,
-             1.0f, -1.0f,  1.0f,
-             1.0f,  1.0f,  1.0f,
-             1.0f,  1.0f,  1.0f,
-             1.0f,  1.0f, -1.0f,
-             1.0f, -1.0f, -1.0f,
-
-            -1.0f, -1.0f,  1.0f,
-            -1.0f,  1.0f,  1.0f,
-             1.0f,  1.0f,  1.0f,
-             1.0f,  1.0f,  1.0f,
-             1.0f, -1.0f,  1.0f,
-            -1.0f, -1.0f,  1.0f,
-
-            -1.0f,  1.0f, -1.0f,
-             1.0f,  1.0f, -1.0f,
-             1.0f,  1.0f,  1.0f,
-             1.0f,  1.0f,  1.0f,
-            -1.0f,  1.0f,  1.0f,
-            -1.0f,  1.0f, -1.0f,
-
-            -1.0f, -1.0f, -1.0f,
-            -1.0f, -1.0f,  1.0f,
-             1.0f, -1.0f, -1.0f,
-             1.0f, -1.0f, -1.0f,
-            -1.0f, -1.0f,  1.0f,
-             1.0f, -1.0f,  1.0f
-        };
 
         // cube VAO
         glGenVertexArrays(1, &obj_VAO);
@@ -156,45 +102,24 @@ namespace MiyaApp {
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
-        // skybox VAO
-        glGenVertexArrays(1, &skybox_VAO);
-        glGenBuffers(1, &skybox_VBO);
-        glBindVertexArray(skybox_VAO);
-        glBindBuffer(GL_ARRAY_BUFFER, skybox_VBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 
         // load textures
         // -------------
         obj_Texture = Miya::Load::loadTexture("resource/images/haruluya_bd.jpg");
 
-        std::vector<std::string> faces
-        {
-            "resource/images/skybox/exosystem/exosystem_lf.jpg",
-            "resource/images/skybox/exosystem/exosystem_rt.jpg",
-            "resource/images/skybox/exosystem/exosystem_up(1).jpg",
-            "resource/images/skybox/exosystem/exosystem_dn(1).jpg",
-            "resource/images/skybox/exosystem/exosystem_ft.jpg",
-            "resource/images/skybox/exosystem/exosystem_bk.jpg"
-
-        };
-        skybox_Texture = Miya::Load::loadCubemap(faces);
-
+        
         // shader configuration
         // --------------------
         shader_obj->use();
         shader_obj->setInt("texture1", 0);
 
-        shader_skybox->use();
-        shader_skybox->setInt("skybox", 0);
 	}
 	void CubeMapImp::Destory()
 	{
         glDeleteVertexArrays(1, &obj_VAO);
-        glDeleteVertexArrays(1, &skybox_VAO);
         glDeleteBuffers(1, &obj_VBO);
-        glDeleteBuffers(1, &skybox_VBO);
+
+        m_Skybox->Destory();
 	}
 	void CubeMapImp::OnEvent(Miya::Event& e)
 	{

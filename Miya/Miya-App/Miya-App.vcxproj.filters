@@ -84,6 +84,9 @@
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Components\SkyBox.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -153,6 +156,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Components\SkyBox.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

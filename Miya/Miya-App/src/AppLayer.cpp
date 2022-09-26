@@ -136,7 +136,47 @@ namespace MiyaApp {
 				ImGui::TreePop();
 				ImGui::Separator();
 			}
+			if (ImGui::TreeNode("TransformImp")) {
+				ImGui::Text("");
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					Miya::Application::Get().PushLayer(new AppLayer());
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("TextureImp")) {
+				ImGui::Text("");
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					Miya::Application::Get().PushLayer(new AppLayer());
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("PerspectiveImp")) {
+				ImGui::Text("");
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					Miya::Application::Get().PushLayer(new AppLayer());
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("ModelLoadImp")) {
+				ImGui::Text("Using classes mesh and model to describe objects,and rendering objects with assimp and opengl.");
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					Miya::Application::Get().PushLayer(new AppLayer());
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+
 		}
+
+
+
 		ImGui::End();
 
 
