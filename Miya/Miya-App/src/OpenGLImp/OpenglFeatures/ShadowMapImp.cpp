@@ -71,6 +71,7 @@ namespace MiyaApp{
         shader_quad->setFloat("far_plane", far_plane);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, depth_Map);
+
         m_Skybox->Render(ts, view, projection);
         m_CameraController->OnUpdate(ts);
 	}

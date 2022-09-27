@@ -40,6 +40,7 @@
 #include "utils/Timer.h"
 #include "utils/Random.h"
 #include "utils/Load.h"
+#include "utils/RenderSimpleObj.h"
 //------------------------------
 
 //-----render-------------------

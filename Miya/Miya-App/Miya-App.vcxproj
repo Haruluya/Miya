@@ -170,6 +170,8 @@
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\DeepTestImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\GeometryShaderImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\InstancingImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\NormalMapImp.h" />
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\ParallaxMapImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.h" />
@@ -197,6 +199,8 @@
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\DeepTestImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\GeometryShaderImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\InstancingImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\NormalMapImp.cpp" />
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\ParallaxMapImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\PostprocessImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\ReflectionMapImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.cpp" />
@@ -221,6 +225,10 @@
     <Text Include="resource\shaders\MutiLightImp_Light_F.txt" />
     <Text Include="resource\shaders\MutiLightImp_Light_V.txt" />
     <Text Include="resource\shaders\MutiLightImp_V.txt" />
+    <Text Include="resource\shaders\NormalMapImp_F.txt" />
+    <Text Include="resource\shaders\NormalMapImp_V.txt" />
+    <Text Include="resource\shaders\ParallaxMapImp_F.txt" />
+    <Text Include="resource\shaders\ParallaxMapImp_V.txt" />
     <Text Include="resource\shaders\PerspectiveImp_F.txt" />
     <Text Include="resource\shaders\PerspectiveImp_V.txt" />
     <Text Include="resource\shaders\PhoneImp_F.txt" />
@@ -244,6 +252,8 @@
     <Image Include="resource\images\haruluya.jpg" />
     <Image Include="resource\images\haruluya_bd.jpg" />
     <Image Include="resource\images\HuangGuan.png" />
+    <Image Include="resource\images\wood.jpg" />
+    <Image Include="resource\images\wood_normal.jpg" />
     <Image Include="resource\images\wrong.png" />
     <Image Include="resource\images\wrong1.png" />
   </ItemGroup>

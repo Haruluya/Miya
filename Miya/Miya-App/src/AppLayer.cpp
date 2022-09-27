@@ -16,6 +16,8 @@
 
 #include "OpenGLImp/OpenglFeatures/CubeMapImp.h"
 #include "OpenGLImp/OpenglFeatures/ShadowMapImp.h"
+#include "OpenGLImp/OpenglFeatures/NormalMapImp.h"
+#include "OpenGLImp/OpenglFeatures/ParallaxMapImp.h"
 
 #include "App.h"
 namespace MiyaApp {
@@ -35,7 +37,7 @@ namespace MiyaApp {
 	{
 
 		// Init here
-		renderer = new ShadowMapImp();
+		renderer = new ParallaxMapImp();
 		renderer->Init();
 		MY_INFO("AppLayer init!");
 

@@ -90,6 +90,12 @@
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\ShadowMapImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\NormalMapImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenGLImp\OpenglFeatures\ParallaxMapImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -167,6 +173,12 @@
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\ShadowMapImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\NormalMapImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenGLImp\OpenglFeatures\ParallaxMapImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource\shaders\TextureImp_F.txt">
@@ -211,6 +223,10 @@
     <Text Include="resource\shaders\ShadowMapImp_Depth_F.txt" />
     <Text Include="resource\shaders\ShadowMapImp_Quad_V.txt" />
     <Text Include="resource\shaders\ShadowMapImp_Quad_F.txt" />
+    <Text Include="resource\shaders\NormalMapImp_V.txt" />
+    <Text Include="resource\shaders\NormalMapImp_F.txt" />
+    <Text Include="resource\shaders\ParallaxMapImp_V.txt" />
+    <Text Include="resource\shaders\ParallaxMapImp_F.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\images\haruluya.jpg">
@@ -226,6 +242,12 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="resource\images\haruluya_bd.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\wood.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="resource\images\wood_normal.jpg">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

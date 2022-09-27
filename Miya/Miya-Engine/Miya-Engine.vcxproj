@@ -172,6 +172,7 @@
     <ClInclude Include="src\utils\Image.h" />
     <ClInclude Include="src\utils\Load.h" />
     <ClInclude Include="src\utils\Random.h" />
+    <ClInclude Include="src\utils\RenderSimpleObj.h" />
     <ClInclude Include="src\utils\Timestep.h" />
     <ClInclude Include="src\window\Window.h" />
     <ClInclude Include="src\window\WindowsInput.h" />
@@ -724,6 +725,7 @@
     <ClCompile Include="src\utils\Image.cpp" />
     <ClCompile Include="src\utils\Load.cpp" />
     <ClCompile Include="src\utils\Random.cpp" />
+    <ClCompile Include="src\utils\RenderSimpleObj.cpp" />
     <ClCompile Include="src\window\WindowsInput.cpp" />
     <ClCompile Include="src\window\WinWindow.cpp" />
     <ClCompile Include="vendor\includes\glad\glad.c" />
