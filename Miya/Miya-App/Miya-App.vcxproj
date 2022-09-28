@@ -177,7 +177,17 @@
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\ShadowMapImp.h" />
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.h" />
+    <ClInclude Include="src\PaperImp\ComputeShaderImp.h" />
+    <ClInclude Include="src\PaperImp\CSMImp.h" />
+    <ClInclude Include="src\PaperImp\DSAImp.h" />
     <ClInclude Include="src\PaperImp\MSAAImp.h" />
+    <ClInclude Include="src\PaperImp\OITImp.h" />
+    <ClInclude Include="src\PaperImp\PBBloomImp.h" />
+    <ClInclude Include="src\PaperImp\PBRImp.h" />
+    <ClInclude Include="src\PaperImp\SceneImp.h" />
+    <ClInclude Include="src\PaperImp\SKAnimationImp.h" />
+    <ClInclude Include="src\PaperImp\SSAOImp.h" />
+    <ClInclude Include="src\PaperImp\TessellationImp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp" />
@@ -206,7 +216,17 @@
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\RefractionMapImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\ShadowMapImp.cpp" />
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\StencilTestImp.cpp" />
+    <ClCompile Include="src\PaperImp\ComputeShaderImp.cpp" />
+    <ClCompile Include="src\PaperImp\CSMImp.cpp" />
+    <ClCompile Include="src\PaperImp\DSAImp.cpp" />
     <ClCompile Include="src\PaperImp\MSAAImp.cpp" />
+    <ClCompile Include="src\PaperImp\OITImp.cpp" />
+    <ClCompile Include="src\PaperImp\PBBloomImp.cpp" />
+    <ClCompile Include="src\PaperImp\PBRImp.cpp" />
+    <ClCompile Include="src\PaperImp\SceneImp.cpp" />
+    <ClCompile Include="src\PaperImp\SKAnimationImp.cpp" />
+    <ClCompile Include="src\PaperImp\SSAOImp.cpp" />
+    <ClCompile Include="src\PaperImp\TessellationImp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource\shaders\CameraControllImp_F.txt" />

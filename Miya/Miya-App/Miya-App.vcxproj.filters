@@ -96,6 +96,36 @@
     <ClInclude Include="src\OpenGLImp\OpenglFeatures\ParallaxMapImp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\PaperImp\SSAOImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\PBRImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\OITImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\SKAnimationImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\CSMImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\SceneImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\TessellationImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\DSAImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\ComputeShaderImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PaperImp\PBBloomImp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\App.cpp">
@@ -177,6 +207,36 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\OpenGLImp\OpenglFeatures\ParallaxMapImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\SSAOImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\PBRImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\OITImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\SKAnimationImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\CSMImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\SceneImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\TessellationImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\DSAImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\ComputeShaderImp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PaperImp\PBBloomImp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
