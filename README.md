@@ -1,9 +1,10 @@
 ## Miya
 A project includes rendering demos and some Complex technology implementations based on OpenGL.
-
-### Introduction 
-
 ![Haruluya](https://img.shields.io/badge/X-Haruluya-brightgreen)![C++](https://img.shields.io/badge/11-C++-blue)![OpenGL](https://img.shields.io/badge/3-OpenGL-red)![imgui](https://img.shields.io/badge/1.87-ImGui-yellow)
+### Introduction
+
+<img src="./Document/Images/miyaT.png" alt="Miya" style="zoom:80%;" />
+
 
 ### Name
 
