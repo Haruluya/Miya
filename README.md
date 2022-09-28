@@ -3,7 +3,7 @@ A project includes rendering demos and some Complex technology implementations b
 ![Haruluya](https://img.shields.io/badge/X-Haruluya-brightgreen)![C++](https://img.shields.io/badge/11-C++-blue)![OpenGL](https://img.shields.io/badge/3-OpenGL-red)![imgui](https://img.shields.io/badge/1.87-ImGui-yellow)
 ### Introduction
 
-<img src="./Document/Images/miyaT.png" alt="Miya" style="zoom:80%;" />
+<img src="./Document/Images/miyaT.png" alt="Miya" style="zoom: 33%;" />
 
 
 ### Name
@@ -12,7 +12,7 @@ A project includes rendering demos and some Complex technology implementations b
 
 One of the main characters in the "NanoCore".
 
-<img src="./Document/Images/miya.jpg" alt="Miya" style="zoom: 80%;" />
+<img src="./Document/Images/miya.jpg" alt="Miya" style="zoom: 50%;" />
 
 ### Usage
 
