@@ -97,5 +97,5 @@ namespace Miya {
         glBindVertexArray(0);
     }
 
-
+  
 }

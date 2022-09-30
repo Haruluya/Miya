@@ -287,6 +287,8 @@
     <Text Include="resource\shaders\NormalMapImp_F.txt" />
     <Text Include="resource\shaders\ParallaxMapImp_V.txt" />
     <Text Include="resource\shaders\ParallaxMapImp_F.txt" />
+    <Text Include="resource\shaders\PBRImp_V.txt" />
+    <Text Include="resource\shaders\PBRImp_F.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\images\haruluya.jpg">

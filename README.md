@@ -14,7 +14,7 @@ A project includes rendering demos and some Complex technology implementations b
 
 One of the main characters in the "NanoCore".
 
-<img src="./Document/Images/miya.jpg" alt="Miya" style="zoom: 50%;" />
+<img src="./Document/Images/miya.png" alt="Miya" style="zoom: 50%;" />
 
 ### Usage
 

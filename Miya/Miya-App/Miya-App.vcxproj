@@ -249,6 +249,8 @@
     <Text Include="resource\shaders\NormalMapImp_V.txt" />
     <Text Include="resource\shaders\ParallaxMapImp_F.txt" />
     <Text Include="resource\shaders\ParallaxMapImp_V.txt" />
+    <Text Include="resource\shaders\PBRImp_F.txt" />
+    <Text Include="resource\shaders\PBRImp_V.txt" />
     <Text Include="resource\shaders\PerspectiveImp_F.txt" />
     <Text Include="resource\shaders\PerspectiveImp_V.txt" />
     <Text Include="resource\shaders\PhoneImp_F.txt" />

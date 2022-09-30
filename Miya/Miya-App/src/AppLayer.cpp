@@ -19,6 +19,9 @@
 #include "OpenGLImp/OpenglFeatures/NormalMapImp.h"
 #include "OpenGLImp/OpenglFeatures/ParallaxMapImp.h"
 
+
+#include "PaperImp/PBRImp.h"
+
 #include "App.h"
 namespace MiyaApp {
 
@@ -37,7 +40,7 @@ namespace MiyaApp {
 	{
 
 		// Init here
-		renderer = new ParallaxMapImp();
+		renderer = new PBRImp();
 		renderer->Init();
 		MY_INFO("AppLayer init!");
 
