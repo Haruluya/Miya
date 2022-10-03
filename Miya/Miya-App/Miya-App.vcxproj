@@ -151,6 +151,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Layout.h" />
     <ClInclude Include="src\App.h" />
     <ClInclude Include="src\AppLayer.h" />
     <ClInclude Include="src\Components\SkyBox.h" />
@@ -190,6 +191,7 @@
     <ClInclude Include="src\PaperImp\TessellationImp.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Layout.cpp" />
     <ClCompile Include="src\App.cpp" />
     <ClCompile Include="src\AppLayer.cpp" />
     <ClCompile Include="src\Components\SkyBox.cpp" />

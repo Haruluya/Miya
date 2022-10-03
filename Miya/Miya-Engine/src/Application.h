@@ -8,8 +8,8 @@
 
 #include "imgui/ImGuiLayer.h"
 
-#define MIYA_WINDOW_WIDTH 1280
-#define MIYA_WINDOW_HEIGHT 720
+#define MIYA_WINDOW_WIDTH 1600
+#define MIYA_WINDOW_HEIGHT 900
 
 
 
@@ -29,7 +29,7 @@ namespace Miya {
 		void PushOverlay(Layer* layer);
 		void PopLayer(Layer* layer);
 		inline Window& GetWindow() { return *m_Window; }
-
+		void Close();
 		inline static Application& Get() { return *s_Instance; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);

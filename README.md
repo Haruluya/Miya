@@ -14,7 +14,7 @@ A project includes rendering demos and some Complex technology implementations b
 
 One of the main characters in the "NanoCore".
 
-<img src="./Document/Images/Miya.png" alt="Miya" style="zoom: 50%;" />
+<img src="./Document/Images/Miya.png" alt="Miya" style="zoom: 33%;" />
 
 ### Usage
 
@@ -24,9 +24,9 @@ git clone https://github.com/Haruluya/Miya.git
 
 ### Presentation
 
-**2022/9/26**
+###### ![20220926](./Document/Images/2022-10-03.png)
 
-###### ![20220926](./Document/Images/2022-09-26.png)
+
 
 ### Contact Author 
 

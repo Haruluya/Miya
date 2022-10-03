@@ -1,3 +1,5 @@
+#include "MApch.h"
+#include "Layout.h"
 #include "AppLayer.h"
 
 
@@ -30,6 +32,7 @@ namespace MiyaApp {
 
 	AppLayer::AppLayer()
 	{
+
 	}
 
 	AppLayer::~AppLayer()
@@ -40,8 +43,10 @@ namespace MiyaApp {
 	{
 
 		// Init here
-		renderer = new PBRImp();
+		renderer = new TriangleImp();
+
 		renderer->Init();
+		m_layout = new Layout();
 		MY_INFO("AppLayer init!");
 
 	}
@@ -63,12 +68,60 @@ namespace MiyaApp {
 	{
 		// Render here
 		//MY_INFO("AppLayer Update!");
+
+		// a stupid way to change renderer(TEMP£¡)
+
+		m_layout->GetFrameBuffer()->Bind();
 		renderer->Render(ts);
+		m_layout->GetFrameBuffer()->Unbind();
+		if (m_changeRender) {
+			switch (m_render)
+			{
+			case 1:
+				renderer = new TriangleImp();
+				break;
+			case 2:
+				renderer = new TextureImp();
+				break;
+			case 3:
+				renderer = new TransformImp();
+				break;
+			case 4:
+				renderer = new PerspectiveImp();
+				break;
+			case 5:
+				renderer = new CameraControllImp();
+				break;
+			case 6:
+				renderer = new ModelLoadImp(); break;
+			case 7:
+				renderer = new PhoneImp(); break;
+			case 8:
+				renderer = new LightingMapImp(); break;
+			case 9:
+				renderer = new MutiLightImp(); break;
+			case 10:
+				renderer = new CubeMapImp(); break;
+			case 11:
+				renderer = new ShadowMapImp(); break;
+			case 12:
+				renderer = new NormalMapImp(); break;
+			case 13:
+				renderer = new ParallaxMapImp(); break;
+			case 14:
+				renderer = new PBRImp(); break;
+			default:
+				break;
+			}
+			renderer->Init();
+			m_changeRender = false;
+		}
 	}
 
 	void AppLayer::OnImGuiRender()
 	{
 		// Render switch frame.
+		m_layout->SetMainLayout();
 		DrawMainAppFrame();
 	}
 
@@ -79,7 +132,7 @@ namespace MiyaApp {
 
 
 
-	void DrawMainAppFrame() {
+	void AppLayer::DrawMainAppFrame() {
 		bool main_app_frame = true;
 		bool test1 = false;
 		bool test2 = false;
@@ -137,7 +190,17 @@ namespace MiyaApp {
 				ImGui::Text("Draw a Triangle to begin cg programing!");
 				ImGui::Spacing();
 				if (ImGui::Button("Rendering")) {
-					Miya::Application::Get().PushLayer(new AppLayer());
+					m_changeRender = true;
+					m_render = 1;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("TextureImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 2;
 				}
 				ImGui::TreePop();
 				ImGui::Separator();
@@ -146,7 +209,8 @@ namespace MiyaApp {
 				ImGui::Text("");
 				ImGui::Spacing();
 				if (ImGui::Button("Rendering")) {
-					Miya::Application::Get().PushLayer(new AppLayer());
+					m_changeRender = true;
+					m_render = 3;
 				}
 				ImGui::TreePop();
 				ImGui::Separator();
@@ -155,7 +219,8 @@ namespace MiyaApp {
 				ImGui::Text("");
 				ImGui::Spacing();
 				if (ImGui::Button("Rendering")) {
-					Miya::Application::Get().PushLayer(new AppLayer());
+					m_changeRender = true;
+					m_render = 4;
 				}
 				ImGui::TreePop();
 				ImGui::Separator();
@@ -164,7 +229,8 @@ namespace MiyaApp {
 				ImGui::Text("");
 				ImGui::Spacing();
 				if (ImGui::Button("Rendering")) {
-					Miya::Application::Get().PushLayer(new AppLayer());
+					m_changeRender = true;
+					m_render = 5;
 				}
 				ImGui::TreePop();
 				ImGui::Separator();
@@ -173,7 +239,82 @@ namespace MiyaApp {
 				ImGui::Text("Using classes mesh and model to describe objects,and rendering objects with assimp and opengl.");
 				ImGui::Spacing();
 				if (ImGui::Button("Rendering")) {
-					Miya::Application::Get().PushLayer(new AppLayer());
+					m_changeRender = true;
+					m_render = 6;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("PhoneImp")) {
+				ImGui::Text("Using classes mesh and model to describe objects,and rendering objects with assimp and opengl.");
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 7;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+
+			if (ImGui::TreeNode("LightingMapImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 8;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("MutiLightImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 9;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("CubeMapImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 10;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("ShadowMapImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 11;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("NormalMapImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 12;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("ParallaxMapImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 13;
+				}
+				ImGui::TreePop();
+				ImGui::Separator();
+			}
+			if (ImGui::TreeNode("PBRImp")) {
+				ImGui::Spacing();
+				if (ImGui::Button("Rendering")) {
+					m_changeRender = true;
+					m_render = 14;
 				}
 				ImGui::TreePop();
 				ImGui::Separator();

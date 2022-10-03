@@ -1689,6 +1689,12 @@
     <ClInclude Include="src\utils\RenderSimpleObj.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\opengl\Framebuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\opengl\OpenGLFramebuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\imgui\ImGuiBuild.cpp">
@@ -1770,6 +1776,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\utils\RenderSimpleObj.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\includes\Imgui\imgui_tables.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opengl\Framebuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\opengl\OpenGLFramebuffer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

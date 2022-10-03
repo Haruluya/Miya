@@ -95,11 +95,11 @@ namespace MiyaApp {
         shader->setInt("roughnessMap", 3);
         shader->setInt("aoMap", 4);
 
-        albedo = Miya::Load::loadTexture("resource/images/pbr/albedo.jpg");
-        normal = Miya::Load::loadTexture("resource/images/pbr//normal.jpg");
-        metallic = Miya::Load::loadTexture("resource/images/pbr/metallic.jpg");
-        roughness = Miya::Load::loadTexture("resource/images/pbr/roughness.jpg");
-        ao = Miya::Load::loadTexture("resource/images/pbr/ao.jpg");
+        albedo = Miya::Load::loadTexture("resource/images/pbr/albedo.png");
+        normal = Miya::Load::loadTexture("resource/images/pbr//normal.png");
+        metallic = Miya::Load::loadTexture("resource/images/pbr/metallic.png");
+        roughness = Miya::Load::loadTexture("resource/images/pbr/roughness.png");
+        ao = Miya::Load::loadTexture("resource/images/pbr/ao.png");
 
         // initialize static shader uniforms before rendering
         // --------------------------------------------------

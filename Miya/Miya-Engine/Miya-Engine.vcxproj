@@ -163,6 +163,8 @@
     <ClInclude Include="src\log\Log.h" />
     <ClInclude Include="src\MiyaEngine.h" />
     <ClInclude Include="src\MYpch.h" />
+    <ClInclude Include="src\opengl\Framebuffer.h" />
+    <ClInclude Include="src\opengl\OpenGLFramebuffer.h" />
     <ClInclude Include="src\render\CameraController.h" />
     <ClInclude Include="src\render\Camera_.h" />
     <ClInclude Include="src\render\Mesh_.h" />
@@ -717,6 +719,8 @@
     <ClCompile Include="src\log\Log.cpp" />
     <ClCompile Include="src\MiyaEngine.cpp" />
     <ClCompile Include="src\MYpch.cpp" />
+    <ClCompile Include="src\opengl\Framebuffer.cpp" />
+    <ClCompile Include="src\opengl\OpenGLFramebuffer.cpp" />
     <ClCompile Include="src\render\CameraController.cpp" />
     <ClCompile Include="src\render\Camera_.cpp" />
     <ClCompile Include="src\render\Mesh_.cpp" />
@@ -735,6 +739,7 @@
     <ClCompile Include="vendor\includes\Imgui\imgui_draw.cpp" />
     <ClCompile Include="vendor\includes\Imgui\imgui_impl_glfw.cpp" />
     <ClCompile Include="vendor\includes\Imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="vendor\includes\Imgui\imgui_tables.cpp" />
     <ClCompile Include="vendor\includes\Imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
